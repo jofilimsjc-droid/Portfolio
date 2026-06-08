@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Johm Mark F. Lim — 3rd Year IT Student, Frontend Developer & UI Designer. HTML, CSS, JS, PHP, SQL, React Native, Python, C#, C++.">
+    <title>Johm Mark F. Lim | Frontend Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="page-bg" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="page-content">
+
+        <!-- NAV -->
+        <header id="navbar" class="nav-bar fixed w-full z-50 top-0">
+            <div class="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#home" class="text-sm font-semibold tracking-tight brand">Johm Mark F. Lim</a>
+
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#about" class="nav-link" data-section="about" data-en="About" data-tl="Tungkol">About</a>
+                    <a href="#experience" class="nav-link" data-section="experience" data-en="Experience" data-tl="Karanasan">Experience</a>
+                    <a href="#projects" class="nav-link" data-section="projects" data-en="Projects" data-tl="Projects">Projects</a>
+                    <a href="#tech" class="nav-link" data-section="tech" data-en="Skills" data-tl="Skills">Skills</a>
+                    <a href="#certificates" class="nav-link" data-section="certificates" data-en="Certs" data-tl="Certs">Certs</a>
+                    <div class="lang-toggle">
+                        <button id="btn-en" onclick="setLanguage('en')" class="lang-btn lang-active">EN</button>
+                        <button id="btn-tl" onclick="setLanguage('tl')" class="lang-btn">TL</button>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun icon-sun"></i>
+                        <i class="fas fa-moon icon-moon"></i>
+                    </button>
+                </nav>
+
+                <div class="flex md:hidden items-center gap-2">
+                    <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun icon-sun"></i>
+                        <i class="fas fa-moon icon-moon"></i>
+                    </button>
+                    <button id="menu-toggle" class="menu-btn" aria-label="Menu">
+                        <i class="fas fa-bars text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden">
+                <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col gap-3">
+                    <a href="#about" class="nav-link py-1" data-en="About" data-tl="Tungkol">About</a>
+                    <a href="#experience" class="nav-link py-1" data-en="Experience" data-tl="Karanasan">Experience</a>
+                    <a href="#projects" class="nav-link py-1" data-en="Projects" data-tl="Projects">Projects</a>
+                    <a href="#tech" class="nav-link py-1" data-en="Skills" data-tl="Skills">Skills</a>
+                    <a href="#certificates" class="nav-link py-1" data-en="Certificates" data-tl="Certificates">Certificates</a>
+                    <a href="#contact" class="btn btn-primary w-full mt-1 justify-center" data-en="Contact" data-tl="Contact">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="home" class="pt-28 pb-16 px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="hero-layout">
+
+                    <!-- ILAGAY DITO ANG 1x1 PROFILE PHOTO: assets/images/profile/profile.jpg (400x400px) -->
+                    <div class="profile-wrap hero-animate">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring">
+                            <img src="assets/images/profile/profile.jpg" alt="Johm Mark F. Lim" class="profile-img"
+                                onerror="handleImageError(this)">
+                            <div class="img-placeholder" style="display:none;">
+                                <span>1x1 Photo<br><small>assets/images/profile/profile.jpg</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-content hero-content-center">
+                        <h1 class="hero-name mb-2 hero-animate hero-animate-d1">Johm Mark F. Lim</h1>
+                        <p class="location-text mb-4 hero-animate hero-animate-d2">Philippines</p>
+
+                        <p class="role-text mb-5 hero-animate hero-animate-d2">
+                            <span data-en="Frontend Developer" data-tl="Frontend Developer">Frontend Developer</span>
+                            <span class="role-divider">\</span>
+                            <span data-en="UI Designer" data-tl="UI Designer">UI Designer</span>
+                            <span class="role-divider">\</span>
+                            <span data-en="IT Student" data-tl="IT Student">IT Student</span>
+                        </p>
+
+                        <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6 hero-animate hero-animate-d3">
+                            <span class="badge">
+                                <i class="fas fa-graduation-cap text-[10px]"></i>
+                                <span data-en="3rd Year BS Information Technology" data-tl="3rd Year BS Information Technology">3rd Year BS Information Technology</span>
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-8 hero-animate hero-animate-d4">
+                            <a href="mailto:jofi.lim.sjc@phinmaed.com" class="btn btn-primary">
+                                <i class="fas fa-envelope text-xs"></i>
+                                <span data-en="Send Email" data-tl="Mag-email">Send Email</span>
+                            </a>
+                            <a href="https://github.com/jofilimsjc-droid" target="_blank" rel="noopener" class="btn btn-ghost">
+                                <i class="fab fa-github text-sm"></i>
+                                GitHub
+                            </a>
+                            <a href="#projects" class="btn btn-ghost">
+                                <span data-en="View Projects" data-tl="Mga Proyekto">View Projects</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+
+                        <p id="hero-desc" class="prose hero-animate hero-animate-d5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section-block px-6 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="About" data-tl="Tungkol">About</p>
+                    <h2 class="section-title" data-en="About Me" data-tl="Tungkol sa Akin">About Me</h2>
+                </div>
+                <div class="prose">
+                    <p data-en="I'm a 3rd year BS Information Technology student with a focus on frontend development and UI design. I enjoy creating visually appealing, user-friendly interfaces that work seamlessly across devices  from wireframe to deployed product." data-tl="Ako ay 3rd year BS Information Technology student na nakatuon sa frontend development at UI design. Mahilig akong gumawa ng maganda at madaling gamitin na interfaces na gumagana sa lahat ng device  mula wireframe hanggang deployed product.">
+                        I'm a 3rd year BS Information Technology student with a focus on frontend development and UI design. I enjoy creating visually appealing, user-friendly interfaces that work seamlessly across devices from wireframe to deployed product.
+                    </p>
+                    <p data-en="I work with HTML, CSS, JavaScript, PHP, SQL, React Native, Python, C#, and C++  building everything from educational portals to advocacy websites. I've contributed to projects like cinema management systems and learning platforms, always aiming for clean code and thoughtful design." data-tl="Gumagamit ako ng HTML, CSS, JavaScript, PHP, SQL, React Native, Python, C#, at C++  mula sa educational portals hanggang advocacy websites. Nakilahok ako sa mga proyekto tulad ng cinema management systems at learning platforms, laging may layuning malinis na code at maayos na design.">
+                        I work with HTML, CSS, JavaScript, PHP, SQL, React Native, Python, C#, and C++  building everything from educational portals to advocacy websites. I've contributed to projects like cinema management systems and learning platforms, always aiming for clean code and thoughtful design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section-block px-6 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="Experience" data-tl="Karanasan">Experience</p>
+                    <h2 class="section-title" data-en="Work & Education" data-tl="Trabaho at Edukasyon">Work & Education</h2>
+                </div>
+                <div class="card exp-card stagger-parent">
+                    <div class="exp-item stagger-item">
+                        <div>
+                            <p class="exp-role" data-en="Frontend Developer & UI Designer" data-tl="Frontend Developer at UI Designer">Frontend Developer & UI Designer</p>
+                            <p class="exp-org" data-en="Personal Projects & School Work" data-tl="Personal Projects at School Work">Personal Projects & School Work</p>
+                        </div>
+                        <span class="exp-year">2025  Present</span>
+                    </div>
+                    <div class="exp-item stagger-item">
+                        <div>
+                            <p class="exp-role">BS Information Technology</p>
+                            <p class="exp-org" data-en="3rd Year Student" data-tl="3rd Year Student">3rd Year Student</p>
+                        </div>
+                        <span class="exp-year" data-en="Present" data-tl="Kasalukuyan">Present</span>
+                    </div>
+                    <div class="exp-item stagger-item">
+                        <div>
+                            <p class="exp-role" data-en="Hello World! ðŸ‘‹" data-tl="Hello World! ðŸ‘‹">Hello World! ðŸ‘‹</p>
+                            <p class="exp-org" data-en="Wrote my first line of code" data-tl="Sinulat ang unang code ko">Wrote my first line of code</p>
+                        </div>
+                        <span class="exp-year">2022</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section-block px-6 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="Projects" data-tl="Mga Proyekto">Projects</p>
+                    <h2 class="section-title" data-en="Recent Projects" data-tl="Mga Kamakailang Proyekto">Recent Projects</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-4 stagger-parent">
+
+                    <a href="https://onecinehub.xo.je/" target="_blank" rel="noopener" class="project-card card stagger-item">
+                        <span class="card-accent" aria-hidden="true"></span>
+                        <div class="project-header">
+                            <h3 class="project-title">OneCineHub</h3>
+                            <span class="project-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                        </div>
+                        <p class="project-url">onecinehub.xo.je</p>
+                        <p class="project-desc" data-en="Cinema management & entertainment platform with booking and admin dashboards." data-tl="Cinema management platform na may booking at admin dashboards.">Cinema management & entertainment platform with booking and admin dashboards.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                    </a>
+
+                    <a href="https://jofilimsjc-droid.github.io/GmoEd/" target="_blank" rel="noopener" class="project-card card stagger-item">
+                        <span class="card-accent" aria-hidden="true"></span>
+                        <div class="project-header">
+                            <h3 class="project-title">GmoEd</h3>
+                            <span class="project-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                        </div>
+                        <p class="project-url">jofilimsjc-droid.github.io/GmoEd</p>
+                        <p class="project-desc" data-en="Educational portal and learning resource hub for academic interaction." data-tl="Educational portal at learning resource hub para sa akademikong pakikipag-ugnayan.">Educational portal and learning resource hub for academic interaction.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </a>
+
+                    <a href="https://jofilimsjc-droid.github.io/-EcoVoices/" target="_blank" rel="noopener" class="project-card card stagger-item">
+                        <span class="card-accent" aria-hidden="true"></span>
+                        <div class="project-header">
+                            <h3 class="project-title">EcoVoices</h3>
+                            <span class="project-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                        </div>
+                        <p class="project-url">jofilimsjc-droid.github.io/-EcoVoices</p>
+                        <p class="project-desc" data-en="Environmental advocacy platform focused on sustainability awareness and community action." data-tl="Environmental advocacy platform para sa sustainability awareness at community action.">Environmental advocacy platform focused on sustainability awareness and community action.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section id="tech" class="section-block px-6 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="Tech Stack" data-tl="Tech Stack">Tech Stack</p>
+                    <h2 class="section-title" data-en="Skills & Tools" data-tl="Mga Kasanayan">Skills & Tools</h2>
+                </div>
+                <div class="tech-grid stagger-parent">
+                    <div class="tech-group stagger-item">
+                        <p class="tech-category" data-en="Frontend" data-tl="Frontend">Frontend</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">CSS</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="tech-group stagger-item">
+                        <p class="tech-category" data-en="Backend & Database" data-tl="Backend at Database">Backend & Database</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill">PHP</span>
+                            <span class="tech-pill">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-group stagger-item">
+                        <p class="tech-category" data-en="Programming Languages" data-tl="Programming Languages">Programming Languages</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">C#</span>
+                            <span class="tech-pill">C++</span>
+                        </div>
+                    </div>
+                    <div class="tech-group stagger-item">
+                        <p class="tech-category" data-en="Mobile & Design" data-tl="Mobile at Design">Mobile & Design</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill">React Native</span>
+                            <span class="tech-pill">UI/UX Design</span>
+                            <span class="tech-pill">Figma</span>
+                            <span class="tech-pill">Responsive Layout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="section-block px-6 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="Certifications" data-tl="Certifications">Certifications</p>
+                    <h2 class="section-title" data-en="Recent Certifications" data-tl="Mga Certification">Recent Certifications</h2>
+                </div>
+                <p class="prose mb-8 text-sm" data-en="Certificates and credentials I've earned along my learning journey." data-tl="Mga certificate at credentials na nakuha ko sa aking learning journey.">
+                    Certificates and credentials I've earned along my learning journey.
+                </p>
+
+                <div class="cert-grid stagger-parent">
+
+                    <!-- CERTIFICATE 1 -->
+                    <!-- ILAGAY DITO ANG CERTIFICATE IMAGE -->
+                    <!-- Palitan ang src="assets/images/certificates/cert1.png" -->
+                    <!-- Palitan ang title at issuer sa ibaba -->
+                    <!-- Recommended size: 800x600px (4:3 ratio) -->
+                    <div class="cert-card card stagger-item">
+                        <div class="cert-img-wrap">
+                            <img src="assets/images/certificates/cert1.png" alt="Certificate of Recognition" class="cert-img"
+                                onerror="handleImageError(this)">
+                            <div class="img-placeholder" style="display:none; position:absolute; inset:0;">
+                                <span>Certificate of Recognition<br><small>assets/images/certificates/cert1.png</small></span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p class="cert-title" data-en="Certificate of Recognition" data-tl="Pamagat ng Certificate 1">Certificate Title 1</p>
+                            <p class="cert-issuer" data-en="" data-tl="">Issuing Organization Â· Year</p>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATE 2 -->
+                    <!-- ILAGAY DITO ANG CERTIFICATE IMAGE -->
+                    <!-- Palitan ang src="assets/images/certificates/cert2.png" -->
+                    <div class="cert-card card stagger-item">
+                        <div class="cert-img-wrap">
+                            <img src="assets/images/certificates/cert2.png" alt="Certificate of Recognition" class="cert-img"
+                                onerror="handleImageError(this)">
+                            <div class="img-placeholder" style="display:none; position:absolute; inset:0;">
+                                <span>Certificate of Recognition<br><small>assets/images/certificates/cert2.png</small></span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p class="cert-title" data-en="Certificate of Recognition" data-tl="Pamagat ng Certificate 2">Certificate Title 2</p>
+                            <p class="cert-issuer" data-en="" data-tl="">Issuing Organization Â· Year</p>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATE 3 -->
+                    <!-- ILAGAY DITO ANG CERTIFICATE IMAGE -->
+                    <!-- Palitan ang src="assets/images/certificates/cert3.png" -->
+                    <div class="cert-card card stagger-item">
+                        <div class="cert-img-wrap">
+                            <img src="assets/images/certificates/cert3.png" alt="Certificate of Recognition3" class="cert-img"
+                                onerror="handleImageError(this)">
+                            <div class="img-placeholder" style="display:none; position:absolute; inset:0;">
+                                <span>Certificate 3<br><small>assets/images/certificates/cert3.png</small></span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p class="cert-title" data-en="Certificate of Recognition" data-tl="Pamagat ng Certificate 3">Certificate Title 3</p>
+                            <p class="cert-issuer" data-en="Issuing Organization Â· Year" data-tl="Issuing Organization Â· Taon">Issuing Organization Â· Year</p>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATE 4 -->
+                    <!-- ILAGAY DITO ANG CERTIFICATE IMAGE -->
+                    <!-- Palitan ang src="assets/images/certificates/cert4.png" -->
+                    <!-- Dagdagan ng mas maraming cert-card kung kailangan -->
+                    <div class="cert-card card stagger-item">
+                        <div class="cert-img-wrap">
+                            <img src="assets/images/certificates/cert4.png" alt="Certificate of Recognition" class="cert-img"
+                                onerror="handleImageError(this)">
+                            <div class="img-placeholder" style="display:none; position:absolute; inset:0;">
+                                <span>Certificate 4<br><small>assets/images/certificates/cert4.png</small></span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p class="cert-title" data-en="Certificate of Recognition" data-tl="Pamagat ng Certificate 4">Certificate Title 4</p>
+                            <p class="cert-issuer" data-en="Issuing Organization Â· Year" data-tl="Issuing Organization Â· Taon">Issuing Organization Â· Year</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section-block px-6 pb-24 fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="section-header">
+                    <p class="section-label" data-en="Contact" data-tl="Kontak">Contact</p>
+                    <h2 class="section-title" data-en="Let's Talk" data-tl="Mag-usap Tayo">Let's Talk</h2>
+                </div>
+                <div class="contact-card">
+                    <p class="prose mb-6 max-w-md mx-auto" data-en="Open for collaborations, freelance work, or internships. Feel free to reach out I'd love to hear from you." data-tl="Bukas para sa collaborations, freelance work, o internships. Huwag mag-atubiling mag-message  gusto kitang makilala.">
+                        Open for collaborations, freelance work, or internships. Feel free to reach out  I'd love to hear from you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-3">
+                        <a href="mailto:jofi.lim.sjc@phinmaed.com" class="btn btn-primary">
+                            <i class="fas fa-envelope text-xs"></i>
+                            jofi.lim.sjc@phinmaed.com
+                        </a>
+                        <a href="https://github.com/jofilimsjc-droid" target="_blank" rel="noopener" class="btn btn-ghost">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <p class="section-label" data-en="Social Links" data-tl="Social Links">Social Links</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="mailto:jofi.lim.sjc@phinmaed.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </a>
+                        <a href="https://github.com/jofilimsjc-droid" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-bar py-8 px-6">
+            <div class="max-w-3xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+                <p class="text-sm font-medium footer-text">Johm Mark F. Lim</p>
+                <p class="text-xs footer-copy">&copy; 2026 Johm Mark F. Lim</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
